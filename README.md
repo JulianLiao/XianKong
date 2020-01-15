@@ -11,9 +11,19 @@
 - 横摆角速度传感器
 
 
-# 线控加速
+# 车体坐标系
 
-# 线控转向
+![Vehicle Coordinate](imgs/vehicle_coordinates_3d.png "Vehicle Coordinate")
+
+一辆车要能够跑起来，最基本的是横向控制和纵向控制。横向控制指的是车能够在y方向上移动，纵向控制指的是车能够在x方向上移动。
+
+# 线控的功能框图
+
+![Sbw Function diagram](imgs/Sbw_function_diagram.png "Sbw Function diagram")
+
+## 线控加速
+
+## 线控转向
 
 Steer-by Wire，简称"SbW"，线控转向
 
@@ -23,7 +33,7 @@ Steer-by Wire，简称"SbW"，线控转向
 
 
 
-# 线控制动
+## 线控制动
 
 
 
