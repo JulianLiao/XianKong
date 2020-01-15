@@ -24,7 +24,11 @@
 
 ![Sbw Function diagram](imgs/Sbw_function_diagram.png "Sbw Function diagram")
 
+没一个系统并不是独立在工作，而是相互之间有依存关系，例如，单独把转向系统剥离出整车，它是不会工作的，必须接入到整车环境中。
+
 ## 线控加速
+
+纵向控制分为3个核心控制：加速控制，减速控制和档位调换。
 
 ## 线控转向
 
