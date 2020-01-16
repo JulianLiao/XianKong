@@ -54,6 +54,21 @@
 
 节气门那里需要接一个伺服电机(servemotor)
 
+The "Position sensor" senses how much you press the "Gas Pedal".
+
+线控油门的实现示意图，
+
+![Throttle by wire](imgs/Drive_by_wire_example.PNG "Throttle by wire")
+
+"Position sensor"的实物图如下：
+
+![Position Sensor for gas pedal](imgs/position_sensor_for_gas_pedal.png "Position Sensor for gas pedal")
+
+ECU，电机的实物图如下：
+
+![ECU and Motor for throttle body](imgs/ECU_and_motor_for_throttle_body.png "ECU and Motor for throttle body")
+
+
 ## 线控转向
 
 Steer-by Wire，简称"SbW"，线控转向
