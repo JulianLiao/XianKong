@@ -1,3 +1,25 @@
+
+
+# 汽车组成部件
+
+节气门，火花塞，喷油嘴的实物图片如下，
+
+![throttle + piston](imgs/components/car_components.jpg "throttle + piston")
+
+## 节气门总成
+
+现代汽车的节气门总成如下：
+
+![Hyundai throttle](imgs/components/Hyundai_motor_throttle.jpg "Hyundai throttle")
+
+别克汽车的节气门总成如下：
+
+![Buick throttle](imgs/components/Buick_throttle.jpg "Buick throttle")
+
+三菱/猎豹汽车的节气门总成如下：
+
+![Mitsubishi/Jaguar throttle](imgs/components/Mitsubishi_Jaguar_throttle.jpg "Mitsubishi/Jaguar throttle")
+
 # XianKong
 
 一共有3个电机，驱动电机（绿通），转向电机（松灵后加），驻车电机（松灵后加）。
@@ -29,6 +51,8 @@
 ## 线控加速
 
 纵向控制分为3个核心控制：加速控制，减速控制和档位调换。
+
+节气门那里需要接一个伺服电机(servemotor)
 
 ## 线控转向
 
@@ -83,3 +107,17 @@ Nexteer  |  耐世特  |  德国  |  2  |  1. 上海市嘉定区安亭镇 2. 湖
 Schaeffler  |  舍弗勒  |  德国  |  2  |  1. 上海市嘉定区安亭镇 2. 湖南湘江新区  |  湖南政府  |  无
 其他  |  verb  |  放水时间  |  其他  |  其他  |  其他
 其他  |  verb  |  水桶大小  |  其他  |  其他  |  其他
+
+
+### 好的Youtube视频介绍
+
+这下面几个视频都是在Youtube上找到的比较好的介绍线控的视频。
+
+https://www.youtube.com/watch?v=QGdEM2TRajw
+
+
+https://www.youtube.com/watch?v=IYm2C7zr82Q
+
+https://www.youtube.com/watch?v=Pgln9L5Y7sQ
+
+https://www.youtube.com/watch?v=7SnpLfCF-r4
