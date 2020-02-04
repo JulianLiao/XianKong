@@ -149,6 +149,12 @@ STM32F4xx是基于Cortex-M4的
 
 STM32F103系列是基于Cortex-M3的
 
+参考文章
+
+http://news.eeworld.com.cn/mcu/ic473892.html
+
+http://news.eeworld.com.cn/mcu/ic476318.html
+
 ## 关于AB相编码器
 
 “叉车项目，建图，路径规划，壁障等问题的讨论”这封邮件里面有详细的解释，该邮件创建于2017-09-22，11:37 AM
