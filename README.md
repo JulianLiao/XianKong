@@ -46,7 +46,7 @@
 
 ![Sbw Function diagram](imgs/Sbw_function_diagram.png "Sbw Function diagram")
 
-没一个系统并不是独立在工作，而是相互之间有依存关系，例如，单独把转向系统剥离出整车，它是不会工作的，必须接入到整车环境中。
+每一个系统并不是独立在工作，而是相互之间有依存关系，例如，单独把转向系统剥离出整车，它是不会工作的，必须接入到整车环境中。
 
 ## 线控加速
 
@@ -145,7 +145,9 @@ https://www.youtube.com/watch?v=7SnpLfCF-r4
 ## STM32F103系列 与 STM32F4xx 系统的区别
 
 STM32F4xx是基于Cortex-M4的
+```
     Cortex-M4的一个核心功能是具有单精度浮点运算单元，其支持所有ARM单精度（注意是ARM单精度，不是x86单精度）数据类型与数据运算。文档的原话是："The Cortex-M4 core features a Floating point unit(FPU) single precision which supports all ARM single-precision data-processing instructions and data types."
+```
 
 STM32F103系列是基于Cortex-M3的
 
