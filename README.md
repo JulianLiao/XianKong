@@ -146,7 +146,9 @@ https://www.youtube.com/watch?v=7SnpLfCF-r4
 
 STM32F4xx是基于Cortex-M4的
 ```
-    Cortex-M4的一个核心功能是具有单精度浮点运算单元，其支持所有ARM单精度（注意是ARM单精度，不是x86单精度）数据类型与数据运算。文档的原话是："The Cortex-M4 core features a Floating point unit(FPU) single precision which supports all ARM single-precision data-processing instructions and data types."
+    Cortex-M4的一个核心功能是具有单精度浮点运算单元，其支持所有ARM单精度（注意是ARM单精度，不是x86单精度）
+    数据类型与数据运算。文档的原话是："The Cortex-M4 core features a Floating point unit(FPU) single
+    precision which supports all ARM single-precision data-processing instructions and data types."
 ```
 
 STM32F103系列是基于Cortex-M3的
