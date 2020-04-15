@@ -142,7 +142,25 @@ https://www.youtube.com/watch?v=7SnpLfCF-r4
 #### 好的文章列表
 
 
-## STM32F103系列 与 STM32F4xx 系统的区别
+
+## 硬件说明
+
+
+## 核心板
+
+核心板是一个两层板，底板(STM32F405RGT6)与上层板是通过两个排针（一横一竖）连到一起的，每一个排针都有20个PIN角。对于横着的排针，底板(STM32F405RGT6)上写着"32060A-Y98-190517"，上层板上写着"32060A-Y99-190517"。
+
+2020.04.15
+
+从四川12座起，开始用新版主控，
+
+![new VCU controller](imgs/vcu_controller/new_VCU_controller.PNG "new VCU controller")
+
+之前的2座车和8座车，均使用旧版主控，松灵发的备用件也是旧版主控
+
+![old vcu controller](imgs/vcu_controller/old_VCU_controller.jpg "old VCU controller")
+
+### STM32F103系列 与 STM32F4xx 系统的区别
 
 STM32F4xx是基于Cortex-M4的
 ```
@@ -159,18 +177,41 @@ http://news.eeworld.com.cn/mcu/ic473892.html
 
 http://news.eeworld.com.cn/mcu/ic476318.html
 
+## EPS
+
+SWD接口可以用于程序下载和调试。USART串口，用于外接USB转串口模块进行固件升级。
+
+我的问题是：
+
+1. SWD是否可以用来做固件升级
+
+我自己给出的答案是：可以
+
+2. USART串口是否可以用于程序下载和调试
+
+我自己的答案是：不可以
+
+《EPS使用说明书.pdf》没有说明转向直流电机4个PIN角的线序，也没有说明扭矩传感器5个PIN角的线序
+
+![EPS interface1 turn-motor](imgs/eps/EPS_interface1_turn.png "EPS interface1 turn-motor")
+
+![EPS interface2 power](imgs/eps/EPS_interface2_power.png "EPS interface2 power")
+
+![EPS interface1](imgs/eps/EPS_interface1.jpg "EPS interface1")
+
+A接的是车载原来就有的电源线，那这个电源是12v还是24v？
+
+B接的是控制转向电机的线。
+
+
+## 油门
+
+英博尔驱动器提供了CAN接口，松灵根据英博尔协议通过CAN接口控制油门和挡位。
+
+
 ## 关于AB相编码器
 
 “叉车项目，建图，路径规划，壁障等问题的讨论”这封邮件里面有详细的解释，该邮件创建于2017-09-22，11:37 AM
 
-## EPS
 
-SWD接口可以用于程序下载和调试。USART串口，用于外接USB转串口模块进行固件升级。
-我的问题是：
-1. SWD是否可以用来做固件升级
-我自己给出的答案是：可以
 
-2. USART串口是否可以用于程序下载和调试
-我自己的答案是：不可以
-
-《EPS使用说明书.pdf》没有说明转向直流电机4个PIN角的线序，也没有说明扭矩传感器5个PIN角的线序
