@@ -145,6 +145,24 @@ https://www.youtube.com/watch?v=7SnpLfCF-r4
 
 ## 硬件说明
 
+## 实际车体测试中遇到问题集锦
+
+### 问题1 - chassis上报Frame_161/151/141/131/121/111/171 timeout
+
+该问题仅在POD4上出现，POD4主控vcu用的是比较旧的固件，POD5/6所用的主控vcu固件已解决了该问题。
+
+对于POD4主控所用的固件，当通过方向盘接管时，首先是转向模块的扭矩传感器感知到的，对主控VCU而言这是一个中断事件，该中断会抢占timer中断（定周期上报反馈帧），导致VCU在一段时间内（约180ms，20ms一帧，约9帧左右）无法上报反馈帧，之后会恢复，也就是chassis不会一直报Frame_1x1 timeout错误。当通过踩刹车踏板接管时，这个动作是直接通过主控VCU上的IO口感知到的，并不影响VCU上报反馈帧。
+
+因此，该问题取决于接管的方式，拧方向盘接管有该错误信息，踩刹车踏板没有该错误信息，这个机制是实现在主控VCU里，并不是我们能够控制的。
+
+![POD4 VCU frame timeout](imgs/vcu_controller/VCU_frame_timeout.jpg "POD4 VCU frame timeout")
+
+### 问题2 - 松灵是否提供了调试PID接口给我们？
+
+没有，chassis与主控VCU唯一的沟通方式就是通过CAN protocol，CAN protocol暴露了什么功能的接口，我们就能用怎样的接口，而现在的CAN protocol 并没有暴露PID接口。
+
+英博尔驱动器是暴漏了PID接口给我们的，有一个上位机的调参软件可以修改Kp, Ki, Kd。
+
 
 ## 核心板
 
